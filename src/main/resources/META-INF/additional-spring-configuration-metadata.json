@@ -1,5 +1,37 @@
-{"properties": [{
-  "name": "storage.temp-directory",
-  "type": "java.lang.String",
-  "description": "A description for 'storage.temp-directory'"
-}]}
+{"properties": [
+  {
+    "name": "storage.temp-directory",
+    "type": "java.lang.String",
+    "description": "A description for 'storage.temp-directory'"
+  },
+  {
+    "name": "queue.video",
+    "type": "java.lang.String",
+    "description": "A description for 'queue.video'"
+  },
+  {
+    "name": "queue.zip",
+    "type": "java.lang.String",
+    "description": "A description for 'queue.zip'"
+  },
+  {
+    "name": "storage.s3.bucket",
+    "type": "java.lang.String",
+    "description": "A description for 'storage.s3.bucket'"
+  },
+  {
+    "name": "cloud.aws.credentials.access-key",
+    "type": "java.lang.String",
+    "description": "A description for 'cloud.aws.credentials.access-key'"
+  },
+  {
+    "name": "cloud.aws.credentials.secret-key",
+    "type": "java.lang.String",
+    "description": "A description for 'cloud.aws.credentials.secret-key'"
+  },
+  {
+    "name": "cloud.aws.region.static",
+    "type": "java.lang.String",
+    "description": "A description for 'cloud.aws.region.static'"
+  }
+]}

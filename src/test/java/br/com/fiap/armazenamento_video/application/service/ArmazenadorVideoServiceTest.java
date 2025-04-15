@@ -1,4 +1,5 @@
 package br.com.fiap.armazenamento_video.application.service;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
@@ -56,8 +57,7 @@ class ArmazenadorVideoServiceTest {
         when(gerarZipDosFramesUseCase.gerar(videoId)).thenReturn("caminho/zip");
         doThrow(new JsonProcessingException("Erro JSON") {}).when(publicarZipGeradoGateway).publicar(any());
 
-        // Act & Assert
-        RuntimeException ex = org.junit.jupiter.api.Assertions.assertThrows(RuntimeException.class, () -> {
+        assertThrows(RuntimeException.class, () -> {
             armazenadorVideoService.processarVideoFinalizado(evento);
         });
 
@@ -73,8 +73,7 @@ class ArmazenadorVideoServiceTest {
         when(gerarZipDosFramesUseCase.gerar(videoId)).thenReturn("caminho/zip");
         doThrow(new AmqpException("Erro AMQP")).when(publicarZipGeradoGateway).publicar(any());
 
-        // Act & Assert
-        RuntimeException ex = org.junit.jupiter.api.Assertions.assertThrows(RuntimeException.class, () -> {
+        assertThrows(RuntimeException.class, () -> {
             armazenadorVideoService.processarVideoFinalizado(evento);
         });
 
