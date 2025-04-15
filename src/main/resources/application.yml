@@ -1,0 +1,30 @@
+# Server
+server:
+    port: 8081
+
+# Spring
+spring:
+    application:
+        name: armazenamento-video
+    profiles:
+        active: dev
+
+queue:
+    video: videos-status
+    zip: zips-gerados
+
+storage:
+    s3:
+        bucket: fiap-videos-processados
+
+cloud:
+    aws:
+        credentials:
+            access-key: ${AWS_ACCESS_KEY}
+            secret-key: ${AWS_SECRET_KEY}
+        region:
+            static: us-east-1
+
+
+
+

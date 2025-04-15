@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driverClassName: ${SPRING_DATASOURCE_DRIVER-CLASS-NAME}
+  jpa:
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL-AUTO}
+      show-sql: true
+      database-platform: ${SPRING_JPA_DATABASE-PLATFORM}
+    properties:
+      hibernate:
+        format_sql: false
+  flyway:
+    locations: classpath:db/migration/postgres
+
+pagamentos:
+    service:
+        url: http://a8079aadac65e4b259be20db9bb47532-88775031.us-east-1.elb.amazonaws.com
+
+producao:
+    service:
+        url: http://ad66fd87e2e5d4f3b95fed69cdeef902-710699114.us-east-1.elb.amazonaws.com
+
+app:
+  callback:
+    url: http://a9f3a309d03134b829f55baa7cb25c2e-670484907.us-east-1.elb.amazonaws.com
