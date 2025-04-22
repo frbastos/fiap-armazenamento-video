@@ -26,4 +26,4 @@ COPY --from=build /app/target/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app/app.jar", "--spring.profiles.active=${SPRING_PROFILES_ACTIVE}"]
 
 # Expor a porta que a aplicação vai usar
-EXPOSE 8081
+EXPOSE 8082
