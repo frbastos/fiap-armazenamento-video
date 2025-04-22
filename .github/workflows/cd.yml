@@ -56,4 +56,4 @@ jobs:
       - name: Update Deployment
         run: |
           kubectl set image deployment/armazenamento-deployment armazenamento-container=ar989827/armazenamento-video:${{ github.sha }}
-          kubectl rollout status deployment/ armazenamento-deployment
+          kubectl rollout status deployment/armazenamento-deployment
