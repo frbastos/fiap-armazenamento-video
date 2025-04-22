@@ -36,8 +36,8 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker buildx build --platform linux/amd64 \
-            -t ar989827/ar989827/armazenamento-video:latest:${{ github.sha }} \
-            -t ar989827/ar989827/armazenamento-video:latest:latest \
+            -t ar989827/armazenamento-video:latest:${{ github.sha }} \
+            -t ar989827/armazenamento-video:latest:latest \
             --push .
 
       # Configurar kubectl para acessar o cluster EKS
