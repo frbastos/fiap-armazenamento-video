@@ -1,6 +1,6 @@
 # Server
 server:
-    port: 8081
+    port: 8082
 
 # Spring
 spring:
@@ -8,6 +8,11 @@ spring:
         name: armazenamento-video
     profiles:
         active: dev
+    rabbitmq:
+        host: ${RABBITMQ_HOST}
+        port: ${RABBITMQ_PORT}
+        username: ${RABBIT_USERNAME}
+        password: ${RABBIT_PASSWORD}
 
 queue:
     video: videos-status
@@ -20,11 +25,7 @@ storage:
 cloud:
     aws:
         credentials:
-            access-key: ${AWS_ACCESS_KEY}
-            secret-key: ${AWS_SECRET_KEY}
+            access-key: ${AWS_ACCESS_KEY_ID}
+            secret-key: ${AWS_SECRET_ACCESS_KEY}
         region:
             static: us-east-1
-
-
-
-
